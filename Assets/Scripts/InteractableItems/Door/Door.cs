@@ -3,9 +3,16 @@ using UnityEngine;
 public class Door : MonoBehaviour, IInteractable
 {
     public Animator m_animatior;
-    private bool m_isOpen = false;
+    protected bool m_isOpen = false;
     private int m_doorOpenHash;
     private int m_doorCloseHash;
+    private int m_doorRattleHash;
+
+    public AudioSource audioSource;
+    public AudioClip openSoundClip;
+    public AudioClip rattleSoundClip; 
+
+
 
 
     [field: SerializeField] public bool CanInteract { get; set; }
@@ -14,10 +21,16 @@ public class Door : MonoBehaviour, IInteractable
     public void FailedInteract()
     {
         //RATTLE
-        Debug.Log("RATTLE");
+        if(rattleSoundClip != null)
+        {
+            audioSource.PlayOneShot(rattleSoundClip, 1);
+        }
+        m_animatior.Play(m_doorRattleHash);
+        
     }
 
-    public void Interact()
+    
+    virtual public void Interact()
     {
         ToggleDoor();
     }
@@ -26,11 +39,16 @@ public class Door : MonoBehaviour, IInteractable
     {
         m_doorOpenHash = Animator.StringToHash("OpenDoor");
         m_doorCloseHash = Animator.StringToHash("CloseDoor");
+        m_doorRattleHash = Animator.StringToHash("DoorRattle");
     }
 
     public void ToggleDoor()
     {
-        Debug.Log("Toggle Door");
+        if (openSoundClip != null)
+        {
+            audioSource.PlayOneShot(openSoundClip, 1);
+        }
+        
         if (m_isOpen)
             CloseDoor();
         else

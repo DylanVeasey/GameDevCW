@@ -40,12 +40,12 @@ public class Lever : MonoBehaviour, IInteractable
 
     public void ToggleLever()
     {
-
+        Debug.Log("Toggle Lever");
         if (!m_on)
         {
-            m_animator.Play("LeverAnimationOn");
+            m_animator.Play("On");
         }
-        else m_animator.Play("LeverAnimationOff");
+        else m_animator.Play("Off");
         m_on = !m_on;
 
     }
@@ -54,7 +54,7 @@ public class Lever : MonoBehaviour, IInteractable
     {
         if (m_on)
         {
-            m_animator.Play("LeverAnimationOff");
+            m_animator.Play("Off");
         }
         m_on = false;
     }
