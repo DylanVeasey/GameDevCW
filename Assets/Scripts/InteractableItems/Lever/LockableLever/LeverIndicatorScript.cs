@@ -8,8 +8,8 @@ public class LeverIndicatorScript : MonoBehaviour, IInteractable
     public Material[] Materials;
     public LockedLever lockedLever;
 
-    [field: SerializeField] public bool CanInteract { get; set; }
-    [field: SerializeField] public bool IsBlocked { get; set; }
+    [field: SerializeField] public bool b_canInteract { get; set; }
+    [field: SerializeField] public bool b_isBlocked { get; set; }
 
     private int currentState = 0;
 

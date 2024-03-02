@@ -2,21 +2,23 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
+    //Animation variables
     public Animator m_animatior;
-    protected bool m_isOpen = false;
     private int m_doorOpenHash;
     private int m_doorCloseHash;
     private int m_doorRattleHash;
 
+    //Audio variables
     public AudioSource audioSource;
     public AudioClip openSoundClip;
-    public AudioClip rattleSoundClip; 
+    public AudioClip rattleSoundClip;
 
+    //Door Status variable
+    protected bool b_isOpen = false;
 
-
-
-    [field: SerializeField] public bool CanInteract { get; set; }
-    [field: SerializeField] public bool IsBlocked { get; set; }
+    // Interactable interface variables
+    [field: SerializeField] public bool b_canInteract { get; set; }
+    [field: SerializeField] public bool b_isBlocked { get; set; }
 
     public void FailedInteract()
     {
@@ -49,7 +51,7 @@ public class Door : MonoBehaviour, IInteractable
             audioSource.PlayOneShot(openSoundClip, 1);
         }
         
-        if (m_isOpen)
+        if (b_isOpen)
             CloseDoor();
         else
             OpenDoor();
@@ -58,21 +60,21 @@ public class Door : MonoBehaviour, IInteractable
     public void CloseDoor()
     {
         m_animatior.Play(m_doorCloseHash);
-        m_isOpen = false;
+        b_isOpen = false;
     }
 
     public void OpenDoor()
     {
         m_animatior.Play(m_doorOpenHash);
-        m_isOpen = true;
+        b_isOpen = true;
     }
 
     public void ResetDoor()
     {
-        if (m_isOpen)
+        if (b_isOpen)
         {
             m_animatior.Play(m_doorCloseHash);
         }
-        m_isOpen = false;
+        b_isOpen = false;
     }
 }

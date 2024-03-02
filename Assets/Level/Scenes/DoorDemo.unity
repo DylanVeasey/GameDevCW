@@ -280,8 +280,8 @@ MonoBehaviour:
   m_animator: {fileID: 42674133}
   doors:
   - {fileID: 1498033199}
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 0
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
 --- !u!95 &42674133 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8084621070581668967, guid: ce2f78cbb0cca9b43b809621de887676,
@@ -556,8 +556,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_animator: {fileID: 2081720426}
   doors: []
-  <CanInteract>k__BackingField: 0
-  <IsBlocked>k__BackingField: 0
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
 --- !u!4 &103500018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1287245724461440769, guid: 4b0d2ea51ebd97f4d91249e4c9bbefc4,
@@ -829,8 +829,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 1e233f96501e81647b5d5fee30b3669c, type: 2}
   - {fileID: 2100000, guid: 882005b7c6b7df94ca521c49dcf54ff6, type: 2}
   lockedLever: {fileID: 616145929}
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 0
+  <b_canInteract>k__BackingField: 1
+  <b_isBlocked>k__BackingField: 0
 --- !u!65 &150794899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -924,8 +924,8 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   openSoundClip: {fileID: 0}
   rattleSoundClip: {fileID: 0}
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 0
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
 --- !u!95 &168514371
 Animator:
   serializedVersion: 5
@@ -1049,8 +1049,8 @@ MonoBehaviour:
   audioSource: {fileID: 245877113}
   openSoundClip: {fileID: 8300000, guid: d0870c964a2354d8094ce31e769a7290, type: 3}
   rattleSoundClip: {fileID: 8300000, guid: cfb34fff51b0847e599e6831ba854864, type: 3}
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 1
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
 --- !u!95 &245877109
 Animator:
   serializedVersion: 5
@@ -1487,8 +1487,8 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   openSoundClip: {fileID: 0}
   rattleSoundClip: {fileID: 0}
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 0
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
 --- !u!4 &411633279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2845504265135504477, guid: e52fa0ab130d63b42bcdd15456a87141,
@@ -2216,11 +2216,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_animator: {fileID: 616145930}
   doors: []
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 0
-  LockedLeverController: {fileID: 150794898}
-  LockedDoors:
+  <b_canInteract>k__BackingField: 1
+  <b_isBlocked>k__BackingField: 0
+  numDoorsControlled: 1
+  doorsControlled:
   - {fileID: 2063934047}
+  doorIndicators:
+  - {fileID: 6655502203007052392}
+  LockedLeverController: {fileID: 150794898}
 --- !u!95 &616145930 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8084621070581668967, guid: ce2f78cbb0cca9b43b809621de887676,
@@ -4142,8 +4145,8 @@ MonoBehaviour:
   audioSource: {fileID: 1487367957}
   openSoundClip: {fileID: 8300000, guid: 6cc4537865ae1479b9e7ac12ab172909, type: 3}
   rattleSoundClip: {fileID: 8300000, guid: ba0dd6d8b717e403ca0fa3bdebe97dad, type: 3}
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 0
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
 --- !u!82 &1487367957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4273,8 +4276,8 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   openSoundClip: {fileID: 0}
   rattleSoundClip: {fileID: 0}
-  <CanInteract>k__BackingField: 0
-  <IsBlocked>k__BackingField: 1
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
 --- !u!4 &1498033200
 Transform:
   m_ObjectHideFlags: 0
@@ -4992,8 +4995,8 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   openSoundClip: {fileID: 0}
   rattleSoundClip: {fileID: 0}
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 0
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
 --- !u!1001 &1752835972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5537,8 +5540,8 @@ MonoBehaviour:
   audioSource: {fileID: 2063934051}
   openSoundClip: {fileID: 0}
   rattleSoundClip: {fileID: 0}
-  <CanInteract>k__BackingField: 1
-  <IsBlocked>k__BackingField: 1
+  <b_canInteract>k__BackingField: 0
+  <b_isBlocked>k__BackingField: 0
   LockableController: {fileID: 6655502203007052392}
 --- !u!82 &2063934051
 AudioSource:

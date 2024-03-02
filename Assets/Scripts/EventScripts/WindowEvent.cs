@@ -11,7 +11,7 @@ public class WindowEvent : Door
     override
     public void Interact()
     {
-        if (!m_isOpen)
+        if (!b_isOpen)
         {
             Debug.Log("WINDOW EVENT");
             onWindowEvent?.Invoke();

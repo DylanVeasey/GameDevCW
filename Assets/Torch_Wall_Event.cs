@@ -22,7 +22,7 @@ public class Torch_Wall_Event : MonoBehaviour
         Destroy(Torch_Light);
 
         //Allow the torch to be interactable 
-        torch.CanInteract = true;
+        torch.b_canInteract = true;
     }
 
 

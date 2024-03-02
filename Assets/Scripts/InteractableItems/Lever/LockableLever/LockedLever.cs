@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class LockedLever : Lever
 {
+    //Doors
+    public int numDoorsControlled = 0;
+
+    public List<Door> doorsControlled = new List<Door>();
+    public List<DoorTypeIndicator> doorIndicators = new List<DoorTypeIndicator>();
+
+    //Lever Indicators
     public LeverIndicatorScript LockedLeverController;
     private int LockedLeverControllerState;
-
-    public LockableDoor[] LockedDoors;
 
     //Get the state of the Door from the 'Lockable Component' which requires 
     // a LockableControllerState
@@ -17,11 +22,23 @@ public class LockedLever : Lever
     {
         LockedLeverControllerState = LockedLeverController.getState();
         Debug.Log(LockedLeverControllerState);
-        foreach (LockableDoor LockedDoor in LockedDoors)
+
+        for (int i = 0; i < numDoorsControlled; i++)
         {
-            LockedDoor.TryUnlock(LockedLeverControllerState);
+            TryUnlock(i, LockedLeverControllerState);
         }
         ToggleLever();
+    }
+
+    public void TryUnlock(int doorNumber, int leverControllerState)
+    {
+        Debug.Log(doorIndicators[doorNumber].getState());
+        Debug.Log(leverControllerState);
+      
+        if (doorIndicators[doorNumber].getState() == leverControllerState)
+        {
+            doorsControlled[doorNumber].Interact();
+        }
     }
 
     public void ResetSystem()
@@ -30,10 +47,6 @@ public class LockedLever : Lever
         this.ResetLever();
 
         //Reset each door
-        foreach (LockableDoor LockedDoor in LockedDoors)
-        {
-            LockedDoor.ResetDoor();
-        }
 
     }
 }

@@ -12,8 +12,8 @@ public class LeverController : MonoBehaviour, IInteractable
 
     private int currentLeverIndicator;
 
-    [field: SerializeField] public bool CanInteract { get; set; }
-    [field: SerializeField] public bool IsBlocked { get; set; }
+    [field: SerializeField] public bool b_canInteract { get; set; }
+    [field: SerializeField] public bool b_isBlocked { get; set; }
 
 
     // a event is a message sent by an object to signal the occurence of an action

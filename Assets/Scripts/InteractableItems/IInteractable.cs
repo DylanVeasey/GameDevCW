@@ -5,15 +5,15 @@ using UnityEngine;
 //Convention to prepend interface names with "I"
 public interface IInteractable
 {
-    bool CanInteract { get;  set; }
-    bool IsBlocked { get;  set; }
+    bool b_canInteract { get;  set; }
+    bool b_isBlocked { get;  set; }
 
     public void TryInteract()
     {
         Debug.Log("TRY INTERACT");
-        if(CanInteract)
+        if(b_canInteract)
         {
-            if (IsBlocked)
+            if (b_isBlocked)
             {
                 Debug.Log("FAILED INTERACT");
                 FailedInteract();
