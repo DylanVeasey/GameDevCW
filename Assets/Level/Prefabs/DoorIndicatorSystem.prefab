@@ -123,8 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e87d29ee4ddbc34492230f302dc21e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorTypeIndicator: 1
-  Object: {fileID: 581878855836905256}
+  doorTypeIndicatorState: 0
 --- !u!1001 &3684484958658682524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,12 +160,12 @@ PrefabInstance:
     - target: {fileID: 3132536217353409052, guid: 89023b0bbd72cac4f8c1ec320e9e42ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.023339588
+      value: 0.02333951
       objectReference: {fileID: 0}
     - target: {fileID: 3132536217353409052, guid: 89023b0bbd72cac4f8c1ec320e9e42ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.35664874
+      value: -0.35664865
       objectReference: {fileID: 0}
     - target: {fileID: 3132536217353409052, guid: 89023b0bbd72cac4f8c1ec320e9e42ce,
         type: 3}
@@ -176,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 3132536217353409052, guid: 89023b0bbd72cac4f8c1ec320e9e42ce,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.000000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 3132536217353409052, guid: 89023b0bbd72cac4f8c1ec320e9e42ce,
         type: 3}
@@ -186,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 3132536217353409052, guid: 89023b0bbd72cac4f8c1ec320e9e42ce,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000029802322
       objectReference: {fileID: 0}
     - target: {fileID: 3132536217353409052, guid: 89023b0bbd72cac4f8c1ec320e9e42ce,
         type: 3}
@@ -230,8 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e87d29ee4ddbc34492230f302dc21e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorTypeIndicator: 0
-  Object: {fileID: 0}
+  doorTypeIndicatorState: 0
 --- !u!4 &1754410009329634432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3132536217353409052, guid: 89023b0bbd72cac4f8c1ec320e9e42ce,

@@ -11,7 +11,7 @@ public class LockedLever : Lever
     public List<DoorTypeIndicator> doorIndicators = new List<DoorTypeIndicator>();
 
     //Lever Indicators
-    public LeverIndicatorScript LockedLeverController;
+    public ItemHolder LockedLeverController;
     private int LockedLeverControllerState;
 
     //Get the state of the Door from the 'Lockable Component' which requires 

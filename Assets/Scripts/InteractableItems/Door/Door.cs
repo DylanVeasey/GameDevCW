@@ -14,7 +14,7 @@ public class Door : MonoBehaviour, IInteractable
     public AudioClip rattleSoundClip;
 
     //Door Status variable
-    protected bool b_isOpen = false;
+    public bool b_isOpen = false;
 
     // Interactable interface variables
     [field: SerializeField] public bool b_canInteract { get; set; }
@@ -22,19 +22,31 @@ public class Door : MonoBehaviour, IInteractable
 
     public void FailedInteract()
     {
-        //RATTLE
-        if(rattleSoundClip != null)
+        //Check if we contain the KeyLock Component
+        if (TryGetComponent<KeyLock>(out KeyLock foundKeyLock) & b_isBlocked)
+        {
+            foundKeyLock.TryUnlock();
+        }
+        else
+        {
+            //RATTLE
+            Rattle();
+        } 
+    }
+
+    public void Rattle()
+    {
+        if (rattleSoundClip != null)
         {
             audioSource.PlayOneShot(rattleSoundClip, 1);
         }
         m_animatior.Play(m_doorRattleHash);
-        
     }
 
     
     virtual public void Interact()
     {
-        ToggleDoor();
+       ToggleDoor();
     }
 
     private void Start()
