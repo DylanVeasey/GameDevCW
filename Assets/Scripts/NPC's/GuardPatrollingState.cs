@@ -15,7 +15,7 @@ public class GuardPatrollingState : IGuardState
         controller.agent.destination = controller.Waypoints[i].position;
         player = GameObject.Find("Player");
 
-        controller.m_animatior.Play(controller.m_guardWalkHash);
+        controller.m_animator.Play(controller.m_guardWalkHash);
 
     }
 

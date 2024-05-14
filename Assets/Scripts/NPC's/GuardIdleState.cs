@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class GuardIdleState : IGuardState
 {
-
-    float timeBeforeSleep;
-
     public void OnEnter(GuardStateController controller)
     {
-   
+        controller.m_animator.Play(controller.m_guardIdleHash);
     }
 
     public void OnExit(GuardStateController controller)

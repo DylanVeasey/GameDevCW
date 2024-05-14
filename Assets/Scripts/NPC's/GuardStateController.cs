@@ -13,9 +13,21 @@ public class GuardStateController : MonoBehaviour
 
     public UnityEngine.AI.NavMeshAgent agent;
 
-    public Animator m_animatior;
+    public Animator m_animator;
     public int m_guardWalkHash;
     public int m_guardRunHash;
+    public int m_guardIdleHash;
+
+    public int m_guardAttack1Hash;
+    public int m_guardAttack2Hash;
+    public int m_guardAttack3Hash;
+    public int m_guardAttack4Hash;
+    public int m_guardAttack5Hash;
+    public int m_guardAttack6Hash;
+
+    public int[] guardAttackHashes;
+
+    public int randomNumber;
 
     public GameObject player;
     private PlayerController playerController;
@@ -32,7 +44,19 @@ public class GuardStateController : MonoBehaviour
 
         m_guardWalkHash = Animator.StringToHash("walk");
         m_guardRunHash = Animator.StringToHash("run");
+        m_guardIdleHash = Animator.StringToHash("Unarmed-Idle-Static");
 
+        m_guardAttack1Hash = Animator.StringToHash("Unarmed-Attack-L1");
+        m_guardAttack2Hash = Animator.StringToHash("Unarmed-Attack-L2");
+        m_guardAttack3Hash = Animator.StringToHash("Unarmed-Attack-L3");
+        m_guardAttack4Hash = Animator.StringToHash("Unarmed-Attack-R1");
+        m_guardAttack5Hash = Animator.StringToHash("Unarmed-Attack-R2");
+        m_guardAttack6Hash = Animator.StringToHash("Unarmed-Attack-R3");
+
+        guardAttackHashes = new int[6] { m_guardAttack1Hash, m_guardAttack2Hash, m_guardAttack3Hash, m_guardAttack4Hash, m_guardAttack5Hash, m_guardAttack6Hash};
+
+        randomNumber = Random.Range(0, 5);
+        Debug.Log(randomNumber);
 
         ChangeState(idleState);
     }
@@ -61,9 +85,11 @@ public class GuardStateController : MonoBehaviour
 
     private IEnumerator attackCooldown()
     {
+        m_animator.Play(guardAttackHashes[randomNumber]);
         playerController.dealDamage(10);
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
+        randomNumber = Random.Range(0, 5);
 
         Debug.Log("DEAL DAMAGE");
         attackState.isOnCooldown = false;

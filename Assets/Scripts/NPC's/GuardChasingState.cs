@@ -14,9 +14,7 @@ public class GuardChasingState : IGuardState
         lastKnownPlayerPosition = controller.player.transform.position;
         controller.agent.destination = lastKnownPlayerPosition;
         player = GameObject.Find("Player");
-
-       
-        controller.m_animatior.Play(controller.m_guardRunHash);
+        controller.m_animator.Play(controller.m_guardRunHash);
 
     }
 
