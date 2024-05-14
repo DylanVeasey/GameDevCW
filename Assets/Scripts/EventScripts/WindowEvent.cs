@@ -5,24 +5,48 @@ using UnityEngine;
 public class WindowEvent : Door
 {
 
-    public delegate void OnWindowEvent();
-    public static OnWindowEvent onWindowEvent;
+    private bool hasActivated = false;
+
+
+    public delegate void OnWindowActivateLever();
+    public static OnWindowActivateLever onWindowActivateLever;
+
+    public delegate void OnWindowUnlightTorch();
+    public static OnWindowUnlightTorch onWindowUnlightTorch;
 
     override
     public void Interact()
     {
-        if (!b_isOpen)
+        if (!hasActivated)
         {
-            Debug.Log("WINDOW EVENT");
-            onWindowEvent?.Invoke();
-            //play particles, sounds, ects
-        }
-        else
-        {
-            //stop the particles, ect
-        }
+            if (!b_isOpen)
+            {
+                Debug.Log("WINDOW EVENT");
+                audioSource.Play();
+                StartCoroutine(updateTorches());
 
+                //play particles, sounds, ects
+            }
+            
+        }
+        if (b_isOpen)
+        {
+            audioSource.Stop();
+        }
         ToggleDoor();
 
+    }
+
+    private IEnumerator updateTorches()
+    {
+        hasActivated = true;
+
+        yield return new WaitForSeconds(1);
+        
+
+        onWindowActivateLever?.Invoke();
+        onWindowUnlightTorch?.Invoke();
+
+        yield return null;
     }
 }
