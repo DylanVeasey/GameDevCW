@@ -20,7 +20,6 @@ public class GuardIdleState : IGuardState
     public void UpdateState(GuardStateController controller) 
     {
         //When player enters the area, go to patrol state
-
         //Check is player has activated the trigger
         if (controller.entryTrigger.getIsTriggered())
         {
