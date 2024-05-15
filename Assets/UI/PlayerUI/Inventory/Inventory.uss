@@ -1,0 +1,27 @@
+.SlotIcon {
+    padding: 15px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.SlotContainer {
+    width: 128px;
+    height: 128px;
+    margin: 5px;
+    border-left-color: rgb(48, 48, 48);
+    border-right-color: rgb(48, 48, 48);
+    border-top-color: rgb(48, 48, 48);
+    border-bottom-color: rgb(48, 48, 48);
+    background-color: rgb(9, 19, 21);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.ActiveSlotIcon {
+    padding: 15px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.26);
+}

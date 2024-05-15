@@ -27,7 +27,8 @@ public class GuardStateController : MonoBehaviour
 
     public int[] guardAttackHashes;
 
-    public int randomNumber;
+    private int randomAttackState;
+    private int randomDamage;
 
     public GameObject player;
     private PlayerController playerController;
@@ -55,8 +56,8 @@ public class GuardStateController : MonoBehaviour
 
         guardAttackHashes = new int[6] { m_guardAttack1Hash, m_guardAttack2Hash, m_guardAttack3Hash, m_guardAttack4Hash, m_guardAttack5Hash, m_guardAttack6Hash};
 
-        randomNumber = Random.Range(0, 5);
-        Debug.Log(randomNumber);
+        randomAttackState = Random.Range(0, 5);
+        randomDamage = Random.Range(10, 20);
 
         ChangeState(idleState);
     }
@@ -85,11 +86,12 @@ public class GuardStateController : MonoBehaviour
 
     private IEnumerator attackCooldown()
     {
-        m_animator.Play(guardAttackHashes[randomNumber]);
-        playerController.dealDamage(10);
+        m_animator.Play(guardAttackHashes[randomAttackState]);
+        playerController.dealDamage(randomDamage);
 
         yield return new WaitForSeconds(1.5f);
-        randomNumber = Random.Range(0, 5);
+        randomAttackState = Random.Range(0, 5);
+        randomDamage = Random.Range(10, 20);
 
         Debug.Log("DEAL DAMAGE");
         attackState.isOnCooldown = false;

@@ -78,18 +78,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SelectSlot4",
+                    "name": "Pause",
                     "type": "Button",
-                    "id": "5248fb05-4dc3-4ea5-b467-1ac3c24ded6e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "SelectSlot5",
-                    "type": "Button",
-                    "id": "19ee4148-5413-4e01-80f8-0bc3c852f4ce",
+                    "id": "3ae14a09-d0eb-4ec4-aac9-05d4d6a0b482",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -231,23 +222,12 @@
                 },
                 {
                     "name": "",
-                    "id": "7a607687-a687-4b52-b89d-de93b41d57eb",
-                    "path": "<Keyboard>/4",
+                    "id": "40c0f3f1-e94f-4551-9bca-160e7ed866e7",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "SelectSlot4",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "87423d47-ecdf-4794-b9e4-2dafcb88ffe1",
-                    "path": "<Keyboard>/5",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SelectSlot5",
+                    "groups": "KeyboardMouse",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

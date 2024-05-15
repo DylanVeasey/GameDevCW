@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Inventory.uss?fileID=7433441132597879392&amp;guid=8fb90952f181f244189cf510d0b9c289&amp;type=3#Inventory" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(255, 255, 255, 0);">
+        <ui:VisualElement name="SlotContainer" style="flex-grow: 1; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0); width: auto; height: auto; max-height: none; align-self: auto; bottom: -1px; position: absolute; left: 1px; max-width: none; min-width: 100%; min-height: 5%; flex-direction: row;" />
+        <ui:VisualElement name="HealthContianer" style="flex-grow: 1; min-width: 100%; min-height: 10%; height: 104px; width: 1061px; max-height: 10%; max-width: 100%;">
+            <ui:Label tabindex="-1" text="Health: 100&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="HealthLabel" class="HealthLabel" style="text-color: rgba(255, 255, 255, 0); background-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

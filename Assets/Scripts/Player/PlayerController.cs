@@ -106,20 +106,6 @@ public class PlayerController : MonoBehaviour
         characterController.Move(baseSpeed * Time.deltaTime * move + gravityMove * Time.deltaTime);
     }
 
-    private void OnJump()
-    {
-        Vector3 jump = new Vector3();
-
-        if (characterController.isGrounded || verticalSpeed < 0f) 
-        {
-            Debug.Log("Jump");
-            jump.y += Mathf.Sqrt(jumpHeight * 30.0f * gravity);
-        }
-        jump.y += -gravity * Time.deltaTime;
-        Debug.Log(jump);
-        characterController.Move(jump * Time.deltaTime);
-    }
-
     private void OnDropItem()
     {
         inventory.RemoveCurrentItem();
@@ -161,6 +147,11 @@ public class PlayerController : MonoBehaviour
 
             interact = false;
         }
+    }
+
+    private void OnPause()
+    {
+        uiController.ActivatePausedScreen();
     }
 
     private void OnSelectSlot1()
