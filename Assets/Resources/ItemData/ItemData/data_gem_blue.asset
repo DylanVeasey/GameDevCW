@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Blue Gem
   icon: {fileID: 21300000, guid: 4c3d8d3b1dabea044a935fc220be042d, type: 3}
-  model: {fileID: 0}
+  model: {fileID: 2320147360679004326, guid: 53d76ddd172d9ac49b28eebdede5f979, type: 3}
   description: A Blue Gem
