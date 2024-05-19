@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1232143751471484909}
   - component: {fileID: 506115265330540978}
   - component: {fileID: 5407913049342124452}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Torch_Wall
   m_TagString: AudioSource
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ AudioSource:
   Priority: 256
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 4
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc5c541cba194043a61d17cc22919d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 4
 --- !u!1 &9222988866110790705
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 5725037847605902684}
   - component: {fileID: 8598749747895036467}
   - component: {fileID: 7375080713257050727}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: TorchLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

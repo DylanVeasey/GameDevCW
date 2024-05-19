@@ -11,7 +11,7 @@ public class SoundController : MonoBehaviour
     private bool isPlaying = false;
     public float range;
 
-    private int layerMask = 1 << 11;
+    private int layerMask;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class SoundController : MonoBehaviour
         player = GameObject.Find("Player");
         audioSource = this.GetComponent<AudioSource>();
         objectPosition = this.transform.position;
-       
+        layerMask = LayerMask.NameToLayer("Structure");
     }
 
     // Update is called once per frame
@@ -27,11 +27,12 @@ public class SoundController : MonoBehaviour
     {
         directionToPlayer = player.transform.position - this.transform.position;
         RaycastHit _hit;
-        if (Vector3.Distance(objectPosition, player.transform.position) < range)
+        if (Vector3.Distance(objectPosition, player.transform.position) <= range)
         {
             Debug.DrawRay(objectPosition, directionToPlayer, Color.green);
             if (Physics.Raycast(objectPosition, directionToPlayer, out _hit, layerMask))
             {
+                Debug.Log(_hit.transform.gameObject.layer);
                 if (_hit.transform.CompareTag("Player") || _hit.transform.CompareTag("AudioSource"))
                 {
                     if (!isPlaying)

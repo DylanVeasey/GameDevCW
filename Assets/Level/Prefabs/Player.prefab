@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5071951892797252992}
   - component: {fileID: 6864623342430825088}
   - component: {fileID: 2145827064925144197}
-  - component: {fileID: 393619054619609743}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -33,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.093, y: 1, z: -2.587}
-  m_LocalScale: {x: 1, y: 0.9, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8358542453020051033}
@@ -175,22 +174,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSlot: 0
-  maxItems: 5
+  maxItems: 3
   inventory_items: []
   player: {fileID: 8358542452837294435}
-  inventoryUI: {fileID: 393619054619609743}
---- !u!114 &393619054619609743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358542452837294435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39fd362003a481243b901556440ef3ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 0}
 --- !u!1 &8358542453020051034
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544fb994b587757419aad57fa3261472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 120
+  mouseSensitivity: 100
   playerBody: {fileID: 8358542452837294461}
 --- !u!114 &4813307751959492849
 MonoBehaviour:

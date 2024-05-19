@@ -35,7 +35,7 @@ public class PausedScreenController : MonoBehaviour
     private void OnResumeButtonClicked()
     {
         Time.timeScale = 1;
-        uiController.ActivePlayerUI();
+        uiController.ActivatePlayerUI();
     }
 
     private void OnMainMenuButtonClicked()

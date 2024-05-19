@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Silver Key
   icon: {fileID: 21300000, guid: 1088918f7485c7c4f85d5f6b1e9dc7de, type: 3}
-  model: {fileID: 2457273537969178838, guid: fbac80f280a03844bbdc56acff09ba24, type: 3}
+  model: {fileID: 244397857642954601, guid: ebd6196041e602d4a949d154875f80e2, type: 3}
   description: A Silver Key

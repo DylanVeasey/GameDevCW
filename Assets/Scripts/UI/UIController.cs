@@ -28,7 +28,7 @@ public class UIController : MonoBehaviour
         UICrosshair.SetActive(false);
     }
 
-    public void ActivePlayerUI()
+    public void ActivatePlayerUI()
     {
         //Deactivate all other UI
         UIGameOverScreen.SetActive(false);
@@ -40,6 +40,7 @@ public class UIController : MonoBehaviour
         //Activate new UI
         UIPlayer.SetActive(true);
         UICrosshair.SetActive(true);
+        
     }
 
     public void ActivateGameOverScreen()
@@ -77,7 +78,6 @@ public class UIController : MonoBehaviour
     public void ActivatePausedScreen()
     {
         //Deactivate all other UI
-        UIPlayer.SetActive(false);
         UICrosshair.SetActive(false);
         UIGameOverScreen.SetActive(false);
         UIGameVictoryScreen.SetActive(false);

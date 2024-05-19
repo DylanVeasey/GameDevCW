@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Golden Key
   icon: {fileID: 21300000, guid: 2bfe5c55556b367458e85d70cf708df1, type: 3}
-  model: {fileID: 7447022692855013307, guid: 6b07ab31d47036645833e234477aa56f, type: 3}
+  model: {fileID: 6484346948026548178, guid: 96eded63d6492e04da485e6aefeb521b, type: 3}
   description: A Golden Key

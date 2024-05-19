@@ -12,6 +12,8 @@ public class StartMenuController : MonoBehaviour
     private Button m_startButton;
     private Button m_exitButton;
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,9 @@ public class StartMenuController : MonoBehaviour
 
         m_startButton = m_root.Q<Button>("StartButton");
         m_exitButton = m_root.Q<Button>("ExitButton");
+
+        
+
 
         m_startButton.clickable.clicked += OnStartButtonClicked;
     }
